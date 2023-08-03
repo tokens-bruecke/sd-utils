@@ -1,26 +1,26 @@
-import StyleDictionary from "style-dictionary";
+const StyleDictionary = require("style-dictionary");
+const DTCGParser = require("./utils").DTCGParser;
+
+/* -------------------- */
+/* CONFIGURATIONS ----- */
+/* -------------------- */
 
 console.log("Build started...");
 console.log("\n==============================================");
 
-// REGISTER THE CUSTOM TRANSFORMS
-
-StyleDictionary.registerTransformGroup({
-  name: "custom-transforms",
-  transforms: ["name/ti/camel"]
-});
+StyleDictionary.registerParser(DTCGParser());
 
 // APPLY THE CONFIGURATION
 const StyleDictionaryExtended = StyleDictionary.extend({
   source: ["tokens/**/*.json"],
   platforms: {
-    scss: {
-      transformGroup: "scss",
+    css: {
+      transformGroup: "css",
       buildPath: "build/",
       files: [
         {
-          destination: "variables.scss",
-          format: "scss/variables"
+          destination: "_variables.css",
+          format: "css/variables"
         }
       ]
     }

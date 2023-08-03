@@ -1,0 +1,20 @@
+{
+  "name": "test-repo",
+  "version": "1.0.0",
+  "description": "This is the repo with the [Style Dictionary](https://amzn.github.io/style-dictionary) examples for the [TokensBrücke](https://www.figma.com/community/plugin/1254538877056388290) Figma plugin.",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf index.js index.js.map test/utils.js && rollup -c && cp index.js test/utils.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Pavel Laptev",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.2",
+    "rollup": "^3.27.1",
+    "tslib": "^2.6.1",
+    "typescript": "^5.1.6"
+  },
+  "type": "module"
+}

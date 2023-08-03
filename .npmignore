@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+# But not these files...
+!.npmignore
+!README.md
+
+# if the files to be tracked are in subdirectories
+!index.js
+	

@@ -1,4 +1,4 @@
-export const removeDollarSign = (obj) => {
+export const removeDollarSign = (obj: AnyObject): AnyObject => {
   if (typeof obj !== "object" || obj === null) {
     return obj;
   }
@@ -7,11 +7,10 @@ export const removeDollarSign = (obj) => {
     return obj.map(removeDollarSign);
   }
 
-  const result = {};
+  const result: AnyObject = {};
 
   for (const key in obj) {
-    const keyProperty = Object.prototype.hasOwnProperty.call(obj, key);
-    if (keyProperty) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
       let newKey = key;
 
       if (

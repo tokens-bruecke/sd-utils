@@ -1,12 +1,8 @@
-interface ObjectType {
-  [key: string]: any;
-}
-
 export const transformObjectValues = (
   obj: any,
   parentKeys: string[] = []
-): Record<string, ObjectType> => {
-  const transformedGrids: Record<string, ObjectType> = {};
+): Record<string, AnyObject> => {
+  const transformedGrids: Record<string, AnyObject> = {};
 
   for (const key in obj) {
     if (typeof obj[key] === "object") {

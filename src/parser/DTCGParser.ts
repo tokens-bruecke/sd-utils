@@ -2,9 +2,15 @@ import {
   removeDollarSign,
   transformObjectValues,
   removeObjectValues
-} from "./../helpers";
+} from "../helpers";
 
-export const DTCGParser = () => {
+interface ParserResult {
+  name: string;
+  pattern: RegExp;
+  parse: (options: { contents: string }) => Record<string, any>;
+}
+
+export const DTCGParser = (): ParserResult => {
   return {
     name: "custom/json",
     pattern: /\.json$|\.tokens\.json$|\.tokens$/,
