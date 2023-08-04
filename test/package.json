@@ -14,8 +14,7 @@
   "author": "Pavel Laptev",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^8.46.0",
-    "style-dictionary": "3.8.0"
-  },
-  "type": "module"
+    "style-dictionary": "3.8.0",
+    "pavelLaptev/test-repo": "git+https://git@github.com/PavelLaptev/test-repo#9508160b9e45e0db445881a0e0d9b0721b34d6a0"
+  }
 }

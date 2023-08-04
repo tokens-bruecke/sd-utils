@@ -1,7 +1,5 @@
-// const StyleDictionary = require("style-dictionary");
-// const BrueckeParser = require("./../").BrueckeParser;
-import StyleDictionary from "style-dictionary";
-import { BrueckeParser } from "pavelLaptev/test-repo/index.js";
+const StyleDictionary = require("style-dictionary");
+const BrueckeParser = require("./utils.js").BrueckeParser;
 
 /* -------------------- */
 /* CONFIGURATIONS ----- */

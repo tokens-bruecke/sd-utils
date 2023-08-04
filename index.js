@@ -1,3 +1,5 @@
+'use strict';
+
 const removeDollarSign = (obj) => {
     if (typeof obj !== "object" || obj === null) {
         return obj;
@@ -87,5 +89,9 @@ const DTCGParser = {
     }
 };
 
-export { BrueckeParser, DTCGParser, removeDollarSign, removeObjectValues, transformObjectValues };
+exports.BrueckeParser = BrueckeParser;
+exports.DTCGParser = DTCGParser;
+exports.removeDollarSign = removeDollarSign;
+exports.removeObjectValues = removeObjectValues;
+exports.transformObjectValues = transformObjectValues;
 //# sourceMappingURL=index.js.map
