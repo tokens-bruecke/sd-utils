@@ -1,3 +1,5 @@
+import { AnyObject } from "../../types";
+
 export const removeDollarSign = (obj: AnyObject): AnyObject => {
   if (typeof obj !== "object" || obj === null) {
     return obj;

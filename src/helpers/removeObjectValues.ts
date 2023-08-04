@@ -1,3 +1,5 @@
+import { AnyObject } from "../../types";
+
 export const removeObjectValues = (obj: AnyObject): AnyObject => {
   for (const key in obj) {
     if (typeof obj[key] === "object" && obj[key] !== null) {

@@ -1,3 +1,7 @@
+interface AnyObject {
+  [key: string]: any;
+}
+
 declare const removeDollarSign: (obj: AnyObject) => AnyObject;
 
 declare const transformObjectValues: (obj: any, parentKeys?: string[]) => Record<string, AnyObject>;

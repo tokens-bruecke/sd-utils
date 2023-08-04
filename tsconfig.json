@@ -3,9 +3,7 @@
     "target": "es2018",
     "module": "esnext",
     "moduleResolution": "node",
-    "noEmitOnError": true,
-    "lib": ["es2017"],
     "strict": true,
-    "esModuleInterop": false
+    "esModuleInterop": true
   }
 }
