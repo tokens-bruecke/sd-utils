@@ -88,4 +88,4 @@ const DTCGParser = {
 };
 
 export { BrueckeParser, DTCGParser, removeDollarSign, removeObjectValues, transformObjectValues };
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=index.mjs.map

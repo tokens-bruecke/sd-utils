@@ -16,5 +16,6 @@
   "devDependencies": {
     "eslint": "^8.46.0",
     "style-dictionary": "3.8.0"
-  }
+  },
+  "type": "module"
 }

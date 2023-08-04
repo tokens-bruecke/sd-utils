@@ -15,6 +15,8 @@
     "@rollup/plugin-typescript": "^11.1.2",
     "chokidar-cli": "^3.0.0",
     "rollup": "^3.27.1",
+    "rollup-plugin-dts": "^5.3.1",
+    "rollup-plugin-esbuild": "^5.0.0",
     "tslib": "^2.6.1",
     "typescript": "^5.1.6"
   },
