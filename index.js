@@ -61,25 +61,35 @@ const removeObjectValues = (obj) => {
     return obj;
 };
 
-const DTCGParser = () => {
-    return {
-        name: "custom/json",
-        pattern: /\.json$|\.tokens\.json$|\.tokens$/,
-        parse: ({ contents }) => {
-            // Remove $meta from the JSON
-            const json = JSON.parse(contents);
-            delete json.$meta;
-            // Remove $ from the JSON
-            const jsonWithoutDollarSign = removeDollarSign(json);
-            const transformedGrids = transformObjectValues(jsonWithoutDollarSign);
-            Object.assign(jsonWithoutDollarSign, transformedGrids);
-            // Remove properties with objects
-            const jsonWithoutPropertiesWithObjects = removeObjectValues(jsonWithoutDollarSign);
-            return jsonWithoutPropertiesWithObjects;
-        }
-    };
+const BrueckeParser = {
+    name: "custom/tokensBruecke",
+    pattern: /\.json$|\.tokens\.json$|\.tokens$/,
+    parse: ({ contents }) => {
+        // Remove $meta from the JSON
+        const json = JSON.parse(contents);
+        delete json.$meta;
+        // Remove $ from the JSON
+        const jsonWithoutDollarSign = removeDollarSign(json);
+        const transformedValues = transformObjectValues(jsonWithoutDollarSign);
+        Object.assign(jsonWithoutDollarSign, transformedValues);
+        // Remove properties with objects
+        const jsonWithoutPropertiesWithObjects = removeObjectValues(jsonWithoutDollarSign);
+        return jsonWithoutPropertiesWithObjects;
+    }
 };
 
+const DTCGParser = {
+    name: "custom/dtcg",
+    pattern: /\.json$|\.tokens\.json$|\.tokens$/,
+    parse: ({ contents }) => {
+        // Remove $meta from the JSON
+        const json = JSON.parse(contents);
+        delete json.$meta;
+        return removeDollarSign(json);
+    }
+};
+
+exports.BrueckeParser = BrueckeParser;
 exports.DTCGParser = DTCGParser;
 exports.removeDollarSign = removeDollarSign;
 exports.removeObjectValues = removeObjectValues;

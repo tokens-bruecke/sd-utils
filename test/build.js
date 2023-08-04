@@ -1,5 +1,5 @@
 const StyleDictionary = require("style-dictionary");
-const DTCGParser = require("./utils").DTCGParser;
+const BrueckeParser = require("./utils").BrueckeParser;
 
 /* -------------------- */
 /* CONFIGURATIONS ----- */
@@ -8,7 +8,7 @@ const DTCGParser = require("./utils").DTCGParser;
 console.log("Build started...");
 console.log("\n==============================================");
 
-StyleDictionary.registerParser(DTCGParser());
+StyleDictionary.registerParser(BrueckeParser);
 
 // APPLY THE CONFIGURATION
 const StyleDictionaryExtended = StyleDictionary.extend({
