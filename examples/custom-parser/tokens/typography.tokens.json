@@ -1,0 +1,246 @@
+{
+  "Typography": {
+    "Title": {
+      "XLarge Desktop": {
+        "value": {
+          "fontFamily": "Gza",
+          "fontWeight": 700,
+          "fontSize": "66px",
+          "lineHeight": "114.99999761581421%",
+          "letterSpacing": "0px"
+        },
+        "type": "typography",
+        "description": "",
+        "extensions": {
+          "styleId": "S:9990a34fcca6a42f145f80dd9b79ccc7522c27f2,"
+        }
+      },
+      "XLarge Mobile": {
+        "value": {
+          "fontFamily": "Gza",
+          "fontWeight": 700,
+          "fontSize": "40px",
+          "lineHeight": "120.00000476837158%",
+          "letterSpacing": "0px"
+        },
+        "type": "typography",
+        "description": "",
+        "extensions": {
+          "styleId": "S:1b84244f921a14dca69eb751ddd3cb6ef9d7e0a4,"
+        }
+      },
+      "Medium Adaptive Desktop": {
+        "value": {
+          "fontFamily": "ABC Marfa",
+          "fontWeight": 500,
+          "fontSize": "34px",
+          "lineHeight": "120.00000476837158%",
+          "letterSpacing": "0px"
+        },
+        "type": "typography",
+        "description": "",
+        "extensions": {
+          "styleId": "S:7f219deec8c9d472c03cc66c5c63b69c58125e0a,"
+        }
+      },
+      "Medium Adaptive Mobile": {
+        "value": {
+          "fontFamily": "ABC Marfa",
+          "fontWeight": 500,
+          "fontSize": "24px",
+          "lineHeight": "129.99999523162842%",
+          "letterSpacing": "0px"
+        },
+        "type": "typography",
+        "description": "",
+        "extensions": {
+          "styleId": "S:e5de9b298ed3a9b54b917a87aa529a81592c2d28,"
+        }
+      }
+    },
+    "Title ": {
+      " Large": {
+        "value": {
+          "fontFamily": "Gza",
+          "fontWeight": 700,
+          "fontSize": "40px",
+          "lineHeight": "120.00000476837158%",
+          "letterSpacing": "0px"
+        },
+        "type": "typography",
+        "description": "",
+        "extensions": {
+          "styleId": "S:7af4143f38595bf940c4566c03553baf6330d3ff,"
+        }
+      },
+      " Medium": {
+        "value": {
+          "fontFamily": "Gza",
+          "fontWeight": 700,
+          "fontSize": "34px",
+          "lineHeight": "120.00000476837158%",
+          "letterSpacing": "0px"
+        },
+        "type": "typography",
+        "description": "",
+        "extensions": {
+          "styleId": "S:6de913b26a92f3f2dbd902906f16d3043a6a61f4,"
+        }
+      },
+      " Small": {
+        "value": {
+          "fontFamily": "ABC Marfa",
+          "fontWeight": 500,
+          "fontSize": "24px",
+          "lineHeight": "129.99999523162842%",
+          "letterSpacing": "0px"
+        },
+        "type": "typography",
+        "description": "",
+        "extensions": {
+          "styleId": "S:d001c00e188d12a801d76db3b2447e39e8245919,"
+        }
+      }
+    },
+    "Body ": {
+      " Large": {
+        "value": {
+          "fontFamily": "ABC Marfa",
+          "fontWeight": 300,
+          "fontSize": "24px",
+          "lineHeight": "129.99999523162842%",
+          "letterSpacing": "0px"
+        },
+        "type": "typography",
+        "description": "",
+        "extensions": {
+          "styleId": "S:5e0afbee296113d7543372e95e6446bce8b542bf,"
+        }
+      },
+      " Main": {
+        "value": {
+          "fontFamily": "ABC Marfa",
+          "fontWeight": 300,
+          "fontSize": "17px",
+          "lineHeight": "129.99999523162842%",
+          "letterSpacing": "0px"
+        },
+        "type": "typography",
+        "description": "",
+        "extensions": {
+          "styleId": "S:07c95dffc101b0d351c26627c2eacb0016d03a3e,"
+        }
+      },
+      " Paragraph": {
+        "value": {
+          "fontFamily": "ABC Marfa",
+          "fontWeight": 300,
+          "fontSize": "17px",
+          "lineHeight": "160.0000023841858%",
+          "letterSpacing": "0px"
+        },
+        "type": "typography",
+        "description": "",
+        "extensions": {
+          "styleId": "S:b283c868155f0bf0781f5076024d36f88e7d7670,"
+        }
+      },
+      " Caption": {
+        "value": {
+          "fontFamily": "ABC Marfa",
+          "fontWeight": 300,
+          "fontSize": "14px",
+          "lineHeight": "150%",
+          "letterSpacing": "0px"
+        },
+        "type": "typography",
+        "description": "",
+        "extensions": {
+          "styleId": "S:921ceae12fae8c2d4278ce05f38317cbdcece249,"
+        }
+      }
+    },
+    "Body": {
+      "Large Adaptive Desktop": {
+        "value": {
+          "fontFamily": "ABC Marfa",
+          "fontWeight": 300,
+          "fontSize": "24px",
+          "lineHeight": "129.99999523162842%",
+          "letterSpacing": "0px"
+        },
+        "type": "typography",
+        "description": "",
+        "extensions": {
+          "styleId": "S:a791ca481c55b348bea644872420a0492c945746,"
+        }
+      },
+      "Large Adaptive Mobile": {
+        "value": {
+          "fontFamily": "ABC Marfa",
+          "fontWeight": 300,
+          "fontSize": "17px",
+          "lineHeight": "129.99999523162842%",
+          "letterSpacing": "0px"
+        },
+        "type": "typography",
+        "description": "",
+        "extensions": {
+          "styleId": "S:8ce55724b8b8aa6a9bcbf43cbcdbef13af11cbdc,"
+        }
+      },
+      "Large Paragraph": {
+        "value": {
+          "fontFamily": "ABC Marfa",
+          "fontWeight": 300,
+          "fontSize": "24px",
+          "lineHeight": "150%",
+          "letterSpacing": "0px"
+        },
+        "type": "typography",
+        "description": "",
+        "extensions": {
+          "styleId": "S:d595bf23d7ed7702ab8d754fc358ca022d3c510f,"
+        }
+      },
+      "Large Paragraph Adaptive Desktop": {
+        "value": {
+          "fontFamily": "ABC Marfa",
+          "fontWeight": 300,
+          "fontSize": "24px",
+          "lineHeight": "150%",
+          "letterSpacing": "0px"
+        },
+        "type": "typography",
+        "description": "",
+        "extensions": {
+          "styleId": "S:1dbca730ef5eed9d5781ee5bff55cf75d14e10b8,"
+        }
+      },
+      "Large Paragraph Adaptive Mobile": {
+        "value": {
+          "fontFamily": "ABC Marfa",
+          "fontWeight": 300,
+          "fontSize": "17px",
+          "lineHeight": "160.0000023841858%",
+          "letterSpacing": "0px"
+        },
+        "type": "typography",
+        "description": "",
+        "extensions": {
+          "styleId": "S:a80c5dca67805565c23c45aa05abe1bea44dad24,"
+        }
+      }
+    }
+  },
+  "$meta": {
+    "useDTCGKeys": false,
+    "colorMode": "hex",
+    "variableCollections": [
+      "sizes",
+      "base-colors",
+      "symantic-colors"
+    ],
+    "createdAt": "2023-08-02T22:51:54.383Z"
+  }
+}
