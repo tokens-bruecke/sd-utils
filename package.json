@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rm -rf index.js index.js.map test/utils.js && rollup -c && cp index.js test/utils.js",
+    "build:watch": "chokidar 'src/**/*' -c 'npm run build'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.2",
+    "chokidar-cli": "^3.0.0",
     "rollup": "^3.27.1",
     "tslib": "^2.6.1",
     "typescript": "^5.1.6"
