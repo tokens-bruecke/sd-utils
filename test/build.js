@@ -1,5 +1,5 @@
 const StyleDictionary = require("style-dictionary");
-const BrueckeParser = require("./utils.js").BrueckeParser;
+const BrueckeParser = require("pavelLaptev/test-repo").BrueckeParser;
 
 /* -------------------- */
 /* CONFIGURATIONS ----- */
