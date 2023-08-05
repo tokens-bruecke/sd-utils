@@ -2,9 +2,26 @@
   "name": "test-repo",
   "version": "1.0.0",
   "description": "This is the repo with the [Style Dictionary](https://amzn.github.io/style-dictionary) examples for the [TokensBrücke](https://www.figma.com/community/plugin/1254538877056388290) Figma plugin.",
-  "scripts": {},
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.js",
+  "scripts": {
+    "build": "rm -rf index.js index.js.map test/utils.js && rollup -c && cp index.js test/utils.js",
+    "build:watch": "chokidar 'src/**/*' -c 'npm run build'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "keywords": [],
   "author": "Pavel Laptev",
-  "license": "MIT",
-  "devDependencies": {}
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.2",
+    "chokidar-cli": "^3.0.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "rollup": "^3.27.1",
+    "rollup-plugin-dts": "^5.3.1",
+    "rollup-plugin-esbuild": "^5.0.0",
+    "tslib": "^2.6.1",
+    "typescript": "^5.1.6"
+  },
+  "type": "module"
 }

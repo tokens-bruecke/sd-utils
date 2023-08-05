@@ -15,6 +15,6 @@
   "license": "MIT",
   "devDependencies": {
     "style-dictionary": "3.8.0",
-    "eslint": "^8.46.0"
+    "pavelLaptev/test-repo": "git+https://git@github.com/PavelLaptev/test-repo#0648492460a5584369dbfc1161b18176a28bdb76"
   }
 }
