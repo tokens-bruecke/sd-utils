@@ -51,30 +51,15 @@ const BrueckeParser = {
 /* -------------------- */
 
 StyleDictionary.registerTransform({
-  name: "tokensBruecke/css",
+  name: "tokensBruecke/css-shadow",
   type: "value",
   matcher: ({ type }) => {
-    return ["typography", "grid", "shadow", "blur"].includes(type);
+    return ["shadow"].includes(type);
   },
-  transformer: ({ value, name, type }) => {
-    const entries = Object.entries(value);
-
-    // const transformedPath = StyleDictionary.transform["name/cti/kebab"].transformer({ path: [key] });
-
-    const flattendedValues = entries.reduce(
-      (acc, [key, v], index) =>
-        `${acc ? `${acc}\n  ` : ""}${name}-${StyleDictionary.transform[
-          "name/cti/kebab"
-        ].transformer({ path: [key] }, { prefix: "" })}: ${v}${
-          index + 1 === entries.length ? "" : ";"
-        }`,
-      `${name.includes(type) ? "" : `${type}-`}${name}-group;`
-    );
-
-    console.log(flattendedValues);
-
-    return flattendedValues;
-  }
+  transformer: ({ value }) =>
+    `${value.offsetX || 0} ${value.offsetY || 0} ${value.blur || 0} ${
+      value.spread || 0
+    } ${value.color}`
 });
 
 /* -------------------- */
@@ -90,7 +75,7 @@ StyleDictionary.registerParser(BrueckeParser);
 /* Register the custom transformer */
 StyleDictionary.registerTransformGroup({
   name: "custom/css",
-  transforms: ["tokensBruecke/css"]
+  transforms: ["tokensBruecke/css-shadow", "attribute/cti", "name/cti/kebab"]
 });
 
 /* Extend the Style Dictionary configuration */
