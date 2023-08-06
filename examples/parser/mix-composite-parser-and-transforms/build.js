@@ -1,5 +1,5 @@
 const StyleDictionary = require("style-dictionary");
-const tokensbrueckeSDUtils = require("tokensbruecke-sd-utils");
+const tokensbrueckeSDUtils = require("@tokens-bruecke/sd-utils");
 
 /* -------------------- */
 /* CONFIGURATIONS ----- */
