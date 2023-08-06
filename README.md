@@ -17,7 +17,7 @@ This is the repo/package with utils for [Style Dictionary](https://amzn.github.i
     - [Blur CSS Transform](#blur-css-transform)
     - [Typography CSS Transform](#typography-css-transform)
     - [Shorthand Typography CSS Transform](#shorthand-typography-css-transform)
-  - [Examples](#examples)
+  - [Examples folder](#examples-folder)
     - [Parsers](#parsers-1)
     - [Transforms](#transforms-1)
   - [How to tests in development](#how-to-tests-in-development)
@@ -37,7 +37,7 @@ or with a specific version:
 yarn add git+https://github.com/tokens-bruecke/sd-utils.git#package-tag
 ```
 
-Then you can import the package in your Style Dictionary config:
+Then you can import the package:
 
 ```js
 const tokensbrueckeSDUtils = require("@tokens-bruecke/sd-utils");
@@ -47,7 +47,7 @@ const tokensbrueckeSDUtils = require("@tokens-bruecke/sd-utils");
 
 ## Parsers
 
-In order to correctly parse the tokens, you need to register the parser first.
+In order to correctly parse the tokens, you need to register the parser first. It will clean unnecessary data from the file and it can also pre-transform the tokens.
 
 ### DTCGParser
 
@@ -107,6 +107,8 @@ const tokensbrueckeSDUtils = require("@tokens-bruecke/sd-utils");
 StyleDictionary.registerParser(tokensbrueckeSDUtils.compositeParser());
 ```
 
+**Curtomize specific tokens to parse**
+
 Or you can register the parser with a specific tokens only:
 
 ```js
@@ -162,7 +164,7 @@ const StyleDictionaryExtended = StyleDictionary.extend({
   source: ["tokens/**/*.json"],
   platforms: {
     css: {
-      transformGroup: "tokens-bruecke/blur-css", // <-- TRANSFORM GROUP
+      transformGroup: "tokens-bruecke/custom", // <-- TRANSFORM GROUP NAME
       buildPath: "build/",
       files: [
         {
@@ -239,7 +241,7 @@ tokensbrueckeSDUtils.registerTransform(
 
 ---
 
-## Examples
+## Examples folder
 
 You can find examples in the `examples` folder.
 In order to run the examples, you need to install the dependencies first:
