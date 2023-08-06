@@ -15,14 +15,27 @@ This is the repo with the [Style Dictionary](https://amzn.github.io/style-dictio
     - [Blur CSS Transform](#blur-css-transform)
     - [Typography CSS Transform](#typography-css-transform)
     - [Shorthand Typography CSS Transform](#shorthand-typography-css-transform)
+  - [Examples](#examples)
+    - [Parsers](#parsers-1)
+    - [Transforms](#transforms-1)
   - [How to tests in development](#how-to-tests-in-development)
   - [Feedback and requests](#feedback-and-requests)
+
+---
 
 ## Installation
 
 ```bash
 yarn add git+https://github.com/tokens-bruecke/sd-utils.git
 ```
+
+Then you can import the package in your Style Dictionary config:
+
+```js
+const tokensbrueckeSDUtils = require("sd-utils");
+```
+
+---
 
 ## Parsers
 
@@ -215,6 +228,33 @@ tokensbrueckeSDUtils.registerTransform(
 ```css
 --typography-x-large-desktop: 700 66px/114% "Gza";
 ```
+
+---
+
+## Examples
+
+You can find examples in the `examples` folder.
+In order to run the examples, you need to install the dependencies first:
+
+```bash
+yarn
+```
+
+then you can run the build command:
+
+```bash
+yarn build
+```
+
+### Parsers
+
+- [compositeParser](https://github.com/tokens-bruecke/sd-utils/tree/main/examples/parser/composite-parser)
+- [DTCGParser](https://github.com/tokens-bruecke/sd-utils/tree/main/examples/parser/dtcg-parser)
+- [DTCGParser mixed with custom tranforms](https://github.com/tokens-bruecke/sd-utils/tree/main/examples/parser/mix-composite-parser-and-transforms)
+
+### Transforms
+
+- [all transforms](https://github.com/tokens-bruecke/sd-utils/tree/main/examples/transformers) - all transforms in one example. Just uncomment the transform you want to test.
 
 ---
 

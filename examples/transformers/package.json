@@ -7,14 +7,15 @@
     "properties"
   ],
   "scripts": {
-    "build": "yalc update && node ./build.js",
+    "build": "node ./build.js",
+    "build-dev": "yalc update && node ./build.js",
     "clean": "rm -rf build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Pavel Laptev",
   "license": "MIT",
   "dependencies": {
-    "sd-utils": "file:.yalc/sd-utils",
+    "sd-utils": "git+https://github.com/tokens-bruecke/sd-utils.git",
     "style-dictionary": "3.8.0"
   }
 }
