@@ -28,7 +28,7 @@ This is the repo/package with utils for [Style Dictionary](https://amzn.github.i
 ## Installation
 
 ```bash
-yarn add git+https://github.com/tokens-bruecke/@tokens-bruecke/sd-utils.git#package-tag
+yarn add git+https://github.com/tokens-bruecke/sd-utils.git#package-tag
 ```
 
 Then you can import the package in your Style Dictionary config:
@@ -250,13 +250,13 @@ yarn build
 
 ### Parsers
 
-- [compositeParser](https://github.com/tokens-bruecke/@tokens-bruecke/sd-utils/tree/main/examples/parser/composite-parser)
-- [DTCGParser](https://github.com/tokens-bruecke/@tokens-bruecke/sd-utils/tree/main/examples/parser/dtcg-parser)
-- [DTCGParser mixed with custom tranforms](https://github.com/tokens-bruecke/@tokens-bruecke/sd-utils/tree/main/examples/parser/mix-composite-parser-and-transforms)
+- [compositeParser](https://github.com/tokens-bruecke/sd-utils/tree/main/examples/parser/composite-parser)
+- [DTCGParser](https://github.com/tokens-bruecke/sd-utils/tree/main/examples/parser/dtcg-parser)
+- [DTCGParser mixed with custom tranforms](https://github.com/tokens-bruecke/sd-utils/tree/main/examples/parser/mix-composite-parser-and-transforms)
 
 ### Transforms
 
-- [all transforms](https://github.com/tokens-bruecke/@tokens-bruecke/sd-utils/tree/main/examples/transformers) - all transforms in one example. Just uncomment the transform you want to test.
+- [all transforms](https://github.com/tokens-bruecke/sd-utils/tree/main/examples/transformers) - all transforms in one example. Just uncomment the transform you want to test.
 
 ---
 
@@ -277,4 +277,4 @@ You can also replace local version of the package with the published version fro
 
 ## Feedback and requests
 
-If you have any feedback or requests, please [create an issue](https://github.com/tokens-bruecke/@tokens-bruecke/sd-utils/issues) in this repo.
+If you have any feedback or requests, please [create an issue](https://github.com/tokens-bruecke/sd-utils/issues) in this repo.
