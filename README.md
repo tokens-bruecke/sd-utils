@@ -1,6 +1,8 @@
 # TokensBrücke utils for Style Dictionary
 
-This is the repo with the [Style Dictionary](https://amzn.github.io/style-dictionary) examples for the [TokensBrücke](https://www.figma.com/community/plugin/1254538877056388290) Figma plugin.
+This is the repo/package with utils for [Style Dictionary](https://amzn.github.io/style-dictionary). Utils were made for the [TokensBrücke](https://www.figma.com/community/plugin/1254538877056388290) Figma plugin.
+
+<!-- This is the repo with the [Style Dictionary](https://amzn.github.io/style-dictionary) examples for the [TokensBrücke](https://www.figma.com/community/plugin/1254538877056388290) Figma plugin. -->
 
 ## Table of contents
 
