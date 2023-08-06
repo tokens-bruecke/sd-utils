@@ -26,4 +26,6 @@ interface ParserResult {
 }
 declare const DTCGParser: ParserResult;
 
-export { BrueckeParser, DTCGParser, removeDollarSign, removeObjectValues, transformObjectValues };
+declare const registerTransform: (transformType: "tokensBruecke/shadow-css") => void;
+
+export { BrueckeParser, DTCGParser, registerTransform, removeDollarSign, removeObjectValues, transformObjectValues };

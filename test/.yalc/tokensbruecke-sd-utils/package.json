@@ -13,20 +13,9 @@
   "keywords": [],
   "author": "Pavel Laptev",
   "license": "ISC",
-  "devDependencies": {
-    "@rollup/plugin-typescript": "^11.1.2",
-    "chokidar-cli": "^3.0.0",
-    "fs": "^0.0.1-security",
-    "path": "^0.12.7",
-    "rollup": "^3.27.1",
-    "rollup-plugin-dts": "^5.3.1",
-    "rollup-plugin-esbuild": "^5.0.0",
-    "tslib": "^2.6.1",
-    "typescript": "^5.1.6"
-  },
   "type": "module",
   "dependencies": {
-    "style-dictionary": "^3.8.0",
-    "tokens-bruecke/token-types": "git+https://git@github.com/tokens-bruecke/token-types#f93115417d192b16592fb66fb159d26d6883ab70"
-  }
+    "style-dictionary": "^3.8.0"
+  },
+  "yalcSig": "078778f868ecd0b936a66996c16e7de2"
 }

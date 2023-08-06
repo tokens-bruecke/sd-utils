@@ -13,8 +13,8 @@
   },
   "author": "Pavel Laptev",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "style-dictionary": "3.8.0",
-    "pavelLaptev/test-repo": "git+https://git@github.com/PavelLaptev/test-repo#0648492460a5584369dbfc1161b18176a28bdb76"
+    "tokensbruecke-sd-utils": "file:.yalc/tokensbruecke-sd-utils"
   }
 }

@@ -51,7 +51,7 @@ const BrueckeParser = {
 /* -------------------- */
 
 StyleDictionary.registerTransform({
-  name: "tokensBruecke/css-shadow",
+  name: "tokensBruecke/shadow-css",
   type: "value",
   matcher: ({ type }) => {
     return ["shadow"].includes(type);
@@ -74,8 +74,8 @@ StyleDictionary.registerParser(BrueckeParser);
 
 /* Register the custom transformer */
 StyleDictionary.registerTransformGroup({
-  name: "custom/css",
-  transforms: ["tokensBruecke/css-shadow", "attribute/cti", "name/cti/kebab"]
+  name: "tokensBruecke/shadow-css",
+  transforms: ["tokensBruecke/shadow-css", "attribute/cti", "name/cti/kebab"]
 });
 
 /* Extend the Style Dictionary configuration */

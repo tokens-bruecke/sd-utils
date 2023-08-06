@@ -1,5 +1,5 @@
 const StyleDictionary = require("style-dictionary");
-const BrueckeParser = require("pavelLaptev/test-repo").BrueckeParser;
+const tokensbrueckeSDUtils = require("tokensbruecke-sd-utils");
 
 /* -------------------- */
 /* CONFIGURATIONS ----- */
@@ -8,14 +8,16 @@ const BrueckeParser = require("pavelLaptev/test-repo").BrueckeParser;
 console.log("Build started...");
 console.log("\n==============================================");
 
-StyleDictionary.registerParser(BrueckeParser);
+StyleDictionary.registerParser(tokensbrueckeSDUtils.DTCGParser);
+
+tokensbrueckeSDUtils.registerTransform("tokensBruecke/shadow-css");
 
 // APPLY THE CONFIGURATION
 const StyleDictionaryExtended = StyleDictionary.extend({
   source: ["tokens/**/*.json"],
   platforms: {
     css: {
-      transformGroup: "css",
+      transformGroup: "tokensBruecke/shadow-css",
       buildPath: "build/",
       files: [
         {

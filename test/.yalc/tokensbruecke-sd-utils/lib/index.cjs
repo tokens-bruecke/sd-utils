@@ -1,5 +1,7 @@
 'use strict';
 
+var StyleDictionary = require('style-dictionary');
+
 const removeDollarSign = (obj) => {
     if (typeof obj !== "object" || obj === null) {
         return obj;
@@ -89,8 +91,37 @@ const DTCGParser = {
     }
 };
 
+const shadowCSStransform = () => {
+    StyleDictionary.registerTransform({
+        name: "tokensBruecke/shadow-css",
+        type: "value",
+        matcher: ({ type }) => {
+            return ["shadow"].includes(type);
+        },
+        transformer: ({ value }) => {
+            const { inset, offsetX, offsetY, blur, spread, color } = value;
+            const insetValue = inset ? "inset " : "";
+            return `${insetValue}${offsetX || 0} ${offsetY || 0} ${blur || 0} ${spread || 0} ${color}`;
+        }
+    });
+    StyleDictionary.registerTransformGroup({
+        name: "tokensBruecke/shadow-css",
+        transforms: ["tokensBruecke/shadow-css", "attribute/cti", "name/cti/kebab"]
+    });
+};
+
+const registerTransform = (transformType) => {
+    switch (transformType) {
+        case "tokensBruecke/shadow-css":
+            return shadowCSStransform();
+        default:
+            return;
+    }
+};
+
 exports.BrueckeParser = BrueckeParser;
 exports.DTCGParser = DTCGParser;
+exports.registerTransform = registerTransform;
 exports.removeDollarSign = removeDollarSign;
 exports.removeObjectValues = removeObjectValues;
 exports.transformObjectValues = transformObjectValues;

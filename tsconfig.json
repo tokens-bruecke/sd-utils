@@ -2,8 +2,14 @@
   "compilerOptions": {
     "target": "es2018",
     "module": "esnext",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "experimentalDecorators": true,
+    "removeComments": true,
+    "noImplicitAny": false,
     "moduleResolution": "node",
-    "strict": true,
-    "esModuleInterop": true
-  }
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": ["./types.d.ts"]
+  },
+  "include": ["./types.d.ts"]
 }
