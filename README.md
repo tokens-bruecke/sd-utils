@@ -26,13 +26,13 @@ This is the repo with the [Style Dictionary](https://amzn.github.io/style-dictio
 ## Installation
 
 ```bash
-yarn add git+https://github.com/tokens-bruecke/sd-utils.git
+yarn add git+https://github.com/tokens-bruecke/tokensbruecke-sd-utils.git#package-tag
 ```
 
 Then you can import the package in your Style Dictionary config:
 
 ```js
-const tokensbrueckeSDUtils = require("sd-utils");
+const tokensbrueckeSDUtils = require("tokensbruecke-sd-utils");
 ```
 
 ---
@@ -47,7 +47,7 @@ This parser will transform DTCG tokens into Style Dictionary tokens. It will rem
 
 ```js
 const StyleDictionary = require("style-dictionary");
-const tokensbrueckeSDUtils = require("sd-utils");
+const tokensbrueckeSDUtils = require("tokensbruecke-sd-utils");
 
 StyleDictionary.registerParser(tokensbrueckeSDUtils.DTCGParser);
 ```
@@ -94,7 +94,7 @@ You can register the parser with all composite tokens:
 
 ```js
 const StyleDictionary = require("style-dictionary");
-const tokensbrueckeSDUtils = require("sd-utils");
+const tokensbrueckeSDUtils = require("tokensbruecke-sd-utils");
 
 StyleDictionary.registerParser(tokensbrueckeSDUtils.compositeParser());
 ```
@@ -103,7 +103,7 @@ Or you can register the parser with a specific tokens only:
 
 ```js
 const StyleDictionary = require("style-dictionary");
-const tokensbrueckeSDUtils = require("sd-utils");
+const tokensbrueckeSDUtils = require("tokensbruecke-sd-utils");
 
 StyleDictionary.registerParser(
   tokensbrueckeSDUtils.compositeParser(["typography", "grid"])
@@ -141,7 +141,7 @@ tokensbrueckeSDUtils.registerTransform([
 ```js
 // IMPORT
 const StyleDictionary = require("style-dictionary");
-const tokensbrueckeSDUtils = require("sd-utils");
+const tokensbrueckeSDUtils = require("tokensbruecke-sd-utils");
 
 // REGISTER THE BASIC PARSER
 StyleDictionary.registerParser(tokensbrueckeSDUtils.DTCGParser);
@@ -248,13 +248,13 @@ yarn build
 
 ### Parsers
 
-- [compositeParser](https://github.com/tokens-bruecke/sd-utils/tree/main/examples/parser/composite-parser)
-- [DTCGParser](https://github.com/tokens-bruecke/sd-utils/tree/main/examples/parser/dtcg-parser)
-- [DTCGParser mixed with custom tranforms](https://github.com/tokens-bruecke/sd-utils/tree/main/examples/parser/mix-composite-parser-and-transforms)
+- [compositeParser](https://github.com/tokens-bruecke/tokensbruecke-sd-utils/tree/main/examples/parser/composite-parser)
+- [DTCGParser](https://github.com/tokens-bruecke/tokensbruecke-sd-utils/tree/main/examples/parser/dtcg-parser)
+- [DTCGParser mixed with custom tranforms](https://github.com/tokens-bruecke/tokensbruecke-sd-utils/tree/main/examples/parser/mix-composite-parser-and-transforms)
 
 ### Transforms
 
-- [all transforms](https://github.com/tokens-bruecke/sd-utils/tree/main/examples/transformers) - all transforms in one example. Just uncomment the transform you want to test.
+- [all transforms](https://github.com/tokens-bruecke/tokensbruecke-sd-utils/tree/main/examples/transformers) - all transforms in one example. Just uncomment the transform you want to test.
 
 ---
 
@@ -275,4 +275,4 @@ You can also replace local version of the package with the published version fro
 
 ## Feedback and requests
 
-If you have any feedback or requests, please [create an issue](https://github.com/tokens-bruecke/sd-utils/issues) in this repo.
+If you have any feedback or requests, please [create an issue](https://github.com/tokens-bruecke/tokensbruecke-sd-utils/issues) in this repo.

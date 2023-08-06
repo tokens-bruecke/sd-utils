@@ -1,7 +1,7 @@
 {
   "version": "v1",
   "packages": {
-    "sd-utils": {
+    "tokensbruecke-sd-utils": {
       "signature": "a507d527843250c31f90cf58bf17d63f",
       "file": true
     }

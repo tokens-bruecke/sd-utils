@@ -1,5 +1,5 @@
 const StyleDictionary = require("style-dictionary");
-const tokensbrueckeSDUtils = require("sd-utils");
+const tokensbrueckeSDUtils = require("tokensbruecke-sd-utils");
 
 /* -------------------- */
 /* CONFIGURATIONS ----- */
@@ -19,7 +19,7 @@ StyleDictionary.registerParser(tokensbrueckeSDUtils.DTCGParser());
 /* --------------------------------------------------- */
 
 // REGISTER BLUR CSS TRANSFORM
-tokensbrueckeSDUtils.registerTransform("tokens-bruecke/blur-css");
+// tokensbrueckeSDUtils.registerTransform("tokens-bruecke/blur-css");
 
 // REGISTER SHADOW CSS TRANSFORM
 // tokensbrueckeSDUtils.registerTransform("tokens-bruecke/shadow-css");
@@ -33,11 +33,11 @@ tokensbrueckeSDUtils.registerTransform("tokens-bruecke/blur-css");
 // );
 
 // APPLY MULIPLE TRANSFORMS
-// tokensbrueckeSDUtils.registerTransform([
-//   "tokens-bruecke/blur-css",
-//   "tokens-bruecke/shadow-css",
-//   "tokens-bruecke/typography-css"
-// ]);
+tokensbrueckeSDUtils.registerTransform([
+  "tokens-bruecke/blur-css",
+  "tokens-bruecke/shadow-css",
+  "tokens-bruecke/typography-css"
+]);
 
 // APPLY THE CONFIGURATION
 const StyleDictionaryExtended = StyleDictionary.extend({

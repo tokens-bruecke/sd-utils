@@ -1,5 +1,5 @@
 {
-  "name": "sd-utils",
+  "name": "tokensbruecke-sd-utils",
   "version": "1.8.0",
   "description": "This is the repo with Style Dictionary utils for [TokensBrücke](https://www.figma.com/community/plugin/1254538877056388290) Figma plugin",
   "main": "./lib/index.cjs",
