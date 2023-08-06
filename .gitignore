@@ -1,6 +1,7 @@
 # build and install
 node_modules
 build
+.yalc
 
 # lock files
 yarn.lock

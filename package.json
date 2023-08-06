@@ -1,12 +1,12 @@
 {
-  "name": "tokensbruecke-sd-utils",
-  "version": "1.0.5",
-  "description": "This is the repo with the [Style Dictionary](https://amzn.github.io/style-dictionary) examples for the [TokensBrücke](https://www.figma.com/community/plugin/1254538877056388290) Figma plugin.",
+  "name": "sd-utils",
+  "version": "1.7.0",
+  "description": "This is the repo with Style Dictionary utils for [TokensBrücke](https://www.figma.com/community/plugin/1254538877056388290) Figma plugin",
   "main": "./lib/index.cjs",
   "module": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
-    "build": "rm -rf lib && rollup -c",
+    "build": "rm -rf lib && rollup -c && yalc publish",
     "build:watch": "chokidar 'src/**/*' -c 'npm run build'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,13 +14,13 @@
   "author": "Pavel Laptev",
   "license": "ISC",
   "devDependencies": {
-    "@rollup/plugin-typescript": "^11.1.2",
     "chokidar-cli": "^3.0.0",
     "fs": "^0.0.1-security",
     "path": "^0.12.7",
     "rollup": "^3.27.1",
     "rollup-plugin-dts": "^5.3.1",
     "rollup-plugin-esbuild": "^5.0.0",
+    "rollup-plugin-typescript2": "^0.35.0",
     "tslib": "^2.6.1",
     "typescript": "^5.1.6"
   },

@@ -1,16 +1,16 @@
-import StyleDictionary from "style-dictionary";
+import { config } from "../helpers";
 import { ShadowTokenValueType } from "tokens-bruecke/token-types";
 
-export const shadowCSStransform = () => {
-  StyleDictionary.registerTransform({
-    name: "tokensBruecke/shadow-css",
+export const shadowCSSTransform = () => {
+  return {
+    name: `${config.dictionaryName}/${config.transforms.shadowCSS}`,
+    transitive: true,
     type: "value",
     matcher: ({ type }) => {
       return ["shadow"].includes(type);
     },
-    transformer: ({ value }) => {
-      const { inset, offsetX, offsetY, blur, spread, color } =
-        value as ShadowTokenValueType;
+    transformer: ({ value }: { value: ShadowTokenValueType }) => {
+      const { inset, offsetX, offsetY, blur, spread, color } = value;
 
       const insetValue = inset ? "inset " : "";
 
@@ -18,10 +18,5 @@ export const shadowCSStransform = () => {
         spread || 0
       } ${color}`;
     }
-  });
-
-  StyleDictionary.registerTransformGroup({
-    name: "tokensBruecke/shadow-css",
-    transforms: ["tokensBruecke/shadow-css", "attribute/cti", "name/cti/kebab"]
-  });
+  } as any;
 };

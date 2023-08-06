@@ -1,5 +1,5 @@
 import dts from "rollup-plugin-dts";
-import typescript from "@rollup/plugin-typescript";
+import typescript from "rollup-plugin-typescript2";
 import path from "node:path";
 import fs from "node:fs";
 

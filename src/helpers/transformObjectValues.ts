@@ -1,33 +1,31 @@
-import { AnyObject } from "../../types";
+import { AnyObject, compositeType } from "../../types";
 
 export const transformObjectValues = (
   obj: any,
-  parentKeys: string[] = []
+  argTypes: compositeType[]
 ): Record<string, AnyObject> => {
   const transformedGrids: Record<string, AnyObject> = {};
 
-  for (const key in obj) {
-    if (typeof obj[key] === "object") {
-      const currentKeys: string[] = [...parentKeys, key];
-      const nestedTransformed = transformObjectValues(obj[key], currentKeys);
-      Object.assign(transformedGrids, nestedTransformed);
-    } else if (
-      (key === "type" && obj[key] === "grid") ||
-      (key === "type" && obj[key] === "typography") ||
-      (key === "type" && obj[key] === "shadow") ||
-      (key === "type" && obj[key] === "blur")
-    ) {
-      const valuePath = parentKeys.join("-");
-      const gridValue = obj["value"];
-      for (const prop in gridValue) {
-        const newKey = `${valuePath}-${prop}`;
-        transformedGrids[newKey] = {
-          type: "grid",
-          value: gridValue[prop]
-        };
+  const transform = (obj: any, parentKeys: string[] = []) => {
+    for (const key in obj) {
+      if (typeof obj[key] === "object") {
+        const currentKeys: string[] = [...parentKeys, key];
+        transform(obj[key], currentKeys);
+      } else if (key === "type" && argTypes.includes(obj[key])) {
+        const valuePath = parentKeys.join("-");
+        const gridValue = obj["value"];
+        for (const prop in gridValue) {
+          const newKey = `${valuePath}-${prop}`;
+          transformedGrids[newKey] = {
+            type: obj[key],
+            value: gridValue[prop]
+          };
+        }
       }
     }
-  }
+  };
+
+  transform(obj);
 
   return transformedGrids;
 };

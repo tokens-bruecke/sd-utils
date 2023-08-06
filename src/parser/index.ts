@@ -1,2 +1,2 @@
-export { BrueckeParser } from "./BrueckeParser";
+export { compositeParser } from "./compositeParser";
 export { DTCGParser } from "./DTCGParser";
