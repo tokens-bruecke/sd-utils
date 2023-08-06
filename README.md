@@ -28,6 +28,12 @@ This is the repo/package with utils for [Style Dictionary](https://amzn.github.i
 ## Installation
 
 ```bash
+yarn add git+https://github.com/tokens-bruecke/sd-utils.git
+```
+
+or with a specific version:
+
+```bash
 yarn add git+https://github.com/tokens-bruecke/sd-utils.git#package-tag
 ```
 
