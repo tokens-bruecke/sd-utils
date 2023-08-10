@@ -1,5 +1,5 @@
 import { config } from "../helpers";
-import { ShadowTokenValueType } from "tokens-bruecke/token-types";
+// import global from "@tokens-bruecke/token-types";
 
 export const shadowCSSTransform = () => {
   return {

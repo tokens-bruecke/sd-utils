@@ -9,7 +9,6 @@
     "noImplicitAny": false,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "typeRoots": ["./types.d.ts"]
-  },
-  "include": ["./types.d.ts"]
+    "typeRoots": ["./node_modules/@types", "./node_modules/@tokens-bruecke"]
+  }
 }

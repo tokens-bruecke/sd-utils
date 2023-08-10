@@ -1,5 +1,4 @@
 import { config } from "../helpers";
-import { TypographyTokenValueType } from "tokens-bruecke/token-types";
 
 export const typographyCSSShorthandTransform = () => {
   return {

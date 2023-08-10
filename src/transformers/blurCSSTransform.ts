@@ -1,5 +1,4 @@
 import { config } from "../helpers";
-import { BlurTokenValueType } from "tokens-bruecke/token-types";
 
 export const blurCSSTransform = () => {
   return {

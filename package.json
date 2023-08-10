@@ -1,6 +1,6 @@
 {
   "name": "@tokens-bruecke/sd-utils",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "This is the repo with Style Dictionary utils for [TokensBrücke](https://www.figma.com/community/plugin/1254538877056388290) Figma plugin",
   "main": "./lib/index.cjs",
   "module": "./lib/index.js",
@@ -14,6 +14,8 @@
   "author": "Pavel Laptev",
   "license": "ISC",
   "devDependencies": {
+    "@tokens-bruecke/token-types": "git+https://github.com/tokens-bruecke/token-types.git#1.4.0",
+    "@types/node": "^20.4.9",
     "chokidar-cli": "^3.0.0",
     "fs": "^0.0.1-security",
     "path": "^0.12.7",
@@ -21,9 +23,9 @@
     "rollup-plugin-dts": "^5.3.1",
     "rollup-plugin-esbuild": "^5.0.0",
     "rollup-plugin-typescript2": "^0.35.0",
+    "style-dictionary": "^3.8.0",
     "tslib": "^2.6.1",
-    "typescript": "^5.1.6",
-    "tokens-bruecke/token-types": "git+https://git@github.com/tokens-bruecke/token-types#f93115417d192b16592fb66fb159d26d6883ab70"
+    "typescript": "^5.1.6"
   },
   "type": "module"
 }
