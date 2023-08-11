@@ -22,19 +22,18 @@ This is the repo/package with utils for [Style Dictionary](https://amzn.github.i
     - [Transforms](#transforms-1)
   - [How to tests in development](#how-to-tests-in-development)
   - [Feedback and requests](#feedback-and-requests)
+  - [Changelog](#changelog)
 
 ---
 
 ## Installation
 
 ```bash
-yarn add git+https://github.com/tokens-bruecke/sd-utils.git
-```
+# using npm
+npm i @tokens-bruecke/sd-utils
 
-or with a specific version:
-
-```bash
-yarn add git+https://github.com/tokens-bruecke/sd-utils.git#package-tag
+# or yarn
+yarn add @tokens-bruecke/sd-utils
 ```
 
 Then you can import the package:
@@ -286,3 +285,12 @@ You can also replace local version of the package with the published version fro
 ## Feedback and requests
 
 If you have any feedback or requests, please [create an issue](https://github.com/tokens-bruecke/sd-utils/issues) in this repo.
+
+---
+
+## Changelog
+
+**2.0.0**
+
+- Added `style-dictionary` as a dependency
+- Updated `README.md` file
