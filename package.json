@@ -1,6 +1,6 @@
 {
   "name": "@tokens-bruecke/sd-utils",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "This is the repo with Style Dictionary utils for [TokensBrücke](https://www.figma.com/community/plugin/1254538877056388290) Figma plugin",
   "main": "./lib/index.cjs",
   "module": "./lib/index.js",
@@ -10,9 +10,21 @@
     "build:watch": "chokidar 'src/**/*' -c 'npm run build'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tokens-bruecke/sd-utils.git"
+  },
+  "keywords": [
+    "design-tokens",
+    "figma-plugin",
+    "style-dictionary"
+  ],
   "author": "Pavel Laptev",
-  "license": "ISC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tokens-bruecke/sd-utils/issues"
+  },
+  "homepage": "https://github.com/tokens-bruecke/sd-utils#readme",
   "devDependencies": {
     "@tokens-bruecke/token-types": "git+https://github.com/tokens-bruecke/token-types.git#1.4.0",
     "@types/node": "^20.4.9",

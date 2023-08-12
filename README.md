@@ -294,3 +294,7 @@ If you have any feedback or requests, please [create an issue](https://github.co
 
 - Added `style-dictionary` as a dependency
 - Updated `README.md` file
+
+**2.0.1**
+
+- Updated `package.json` file
