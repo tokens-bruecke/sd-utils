@@ -23,7 +23,7 @@ const StyleDictionaryExtended = StyleDictionary.extend({
   source: ["tokens/**/*.json"],
   platforms: {
     css: {
-      transformGroup: "tokens-bruecke/custom",
+      transformGroup: "tokens-bruecke/css",
       buildPath: "build/",
       files: [
         {

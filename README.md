@@ -342,3 +342,11 @@ If you have any feedback or requests, please [create an issue](https://github.co
 **2.0.1**
 
 - Updated `package.json` file
+
+**3.0.0**
+
+Breaking changes:
+
+- TransformGroup name "tokens-bruecke/custom" breaks down into "tokens-bruecke/css" and "tokens-bruecke/scss"
+- Documented `typography-css-shorthand` transform
+- Added `typography-scss` transform
