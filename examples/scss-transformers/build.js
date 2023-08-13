@@ -12,7 +12,7 @@ console.log("\n==============================================");
 StyleDictionary.registerParser(tokensbrueckeSDUtils.DTCGParser());
 
 // APPLY MULIPLE TRANSFORMS
-tokensbrueckeSDUtils.registerTransform(["tokens-bruecke/typography-scss"]);
+tokensbrueckeSDUtils.registerTransform("tokens-bruecke/typography-scss");
 
 // APPLY THE CONFIGURATION
 const StyleDictionaryExtended = StyleDictionary.extend({

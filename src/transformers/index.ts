@@ -14,7 +14,7 @@ const transformNames = {
   blurCSS: `${config.dictionaryName}/${config.transforms.blurCSS}`
 };
 
-type transformType = typeof transformNames.typographyCSS;
+type transformType = (typeof transformNames)[keyof typeof transformNames];
 
 export const registerTransform = (
   transformsArg: transformType | transformType[]

@@ -46,7 +46,7 @@ declare const transformNames: {
     shadowCSS: string;
     blurCSS: string;
 };
-type transformType = typeof transformNames.typographyCSS;
+type transformType = (typeof transformNames)[keyof typeof transformNames];
 declare const registerTransform: (transformsArg: transformType | transformType[]) => void;
 
 export { DTCGParser, compositeParser, config, registerTransform, removeDollarSign, removeObjectValues, transformObjectValues };
