@@ -4,10 +4,12 @@ import { shadowCSSTransform } from "./shadowCSSTransform";
 import { blurCSSTransform } from "./blurCSSTransform";
 import { typographyCSSTransform } from "./typographyCSSTransform";
 import { typographyCSSShorthandTransform } from "./typographyCSSShorthandTransform";
+import { typographySCSSTransform } from "./typographySCSSTransform";
 
 const transformNames = {
   typographyCSS: `${config.dictionaryName}/${config.transforms.typographyCSS}`,
   typographyCSSShorthand: `${config.dictionaryName}/${config.transforms.typographyCSSShorthand}`,
+  typographySCSSTransform: `${config.dictionaryName}/${config.transforms.typographySCSS}`,
   shadowCSS: `${config.dictionaryName}/${config.transforms.shadowCSS}`,
   blurCSS: `${config.dictionaryName}/${config.transforms.blurCSS}`
 };
@@ -25,6 +27,7 @@ export const registerTransform = (
     const transformMap = {
       [transformNames.typographyCSS]: typographyCSSTransform,
       [transformNames.typographyCSSShorthand]: typographyCSSShorthandTransform,
+      [transformNames.typographySCSSTransform]: typographySCSSTransform,
       [transformNames.shadowCSS]: shadowCSSTransform,
       [transformNames.blurCSS]: blurCSSTransform
     };

@@ -3,6 +3,7 @@ export const config = {
   transforms: {
     typographyCSS: "typography-css",
     typographyCSSShorthand: "typography-css-shorthand",
+    typographySCSS: "typography-scss",
     shadowCSS: "shadow-css",
     blurCSS: "blur-css"
   }

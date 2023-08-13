@@ -13,9 +13,11 @@ This is the repo/package with utils for [Style Dictionary](https://amzn.github.i
     - [DTCGParser](#dtcgparser)
     - [compositeParser](#compositeparser)
   - [Transforms](#transforms)
+    - [Available transforms](#available-transforms)
     - [Shadow CSS Transform](#shadow-css-transform)
     - [Blur CSS Transform](#blur-css-transform)
     - [Typography CSS Transform](#typography-css-transform)
+    - [Typography SCSS Transform](#typography-scss-transform)
     - [Shorthand Typography CSS Transform](#shorthand-typography-css-transform)
   - [Examples folder](#examples-folder)
     - [Parsers](#parsers-1)
@@ -131,10 +133,19 @@ Find out more examples in the `examples` folder.
 In order to use the transforms, you need to register them first with the `registerTransform` function.
 The `registerTransform` function could accept a string or an array of strings. The string is the name of the transform:
 
-- `tokens-bruecke/shadow-css`
-- `tokens-bruecke/blur-css`
-- `tokens-bruecke/typography-css`
-- `tokens-bruecke/grid-css`
+---
+
+### Available transforms
+
+| Transform                                                                      | Description                                            | Language compatibility |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------ | ---------------------- |
+| [tokens-bruecke/shadow-css](#shadow-css-transform)                             | Generates CSS `box-shadow` property                    | All CSS Languages ✅   |
+| [tokens-bruecke/blur-css](#blur-css-transform)                                 | Generates CSS `filter` property                        | All CSS Languages ✅   |
+| [tokens-bruecke/typography-css](#typography-css-transform)                     | Generates multiple CSS properties                      | Only CSS variables ⚠️  |
+| [tokens-bruecke/typography-scss](#typography-scss-transform)                   | Generates multiple SCSS properties                     | Only SCSS variables ⚠️ |
+| [tokens-bruecke/typography-css-shorthand](#shorthand-typography-css-transform) | Generates CSS `font` property without other properties | All CSS Languages ✅   |
+
+---
 
 ```js
 // REGISTER ONE TRANSFORM
@@ -211,6 +222,8 @@ The `role` property is skipped in the output, because it's not used in CSS.
 
 This transform will convert the `typography` tokens into CSS variables including its [shorthand property](https://css-tricks.com/snippets/css/font-shorthand/).
 
+⚠️ This transform is only compatible with CSS variables, and will add `--` prefix to the variable name.
+
 ```js
 tokensbrueckeSDUtils.registerTransform("tokens-bruecke/typography-css");
 ```
@@ -222,6 +235,23 @@ tokensbrueckeSDUtils.registerTransform("tokens-bruecke/typography-css");
 --typography-x-large-desktop-font-size: 66px;
 --typography-x-large-desktop-line-height: 114%;
 --typography-x-large-desktop-letter-spacing: 0px;
+```
+
+### Typography SCSS Transform
+
+Works the same as the `typography-css` transform, but it will generate SCSS variables instead of CSS variables with `$` prefix.
+
+```js
+tokensbrueckeSDUtils.registerTransform("tokens-bruecke/typography-scss");
+```
+
+```scss
+$typography-x-large-desktop: 700 66px/114% "Gza";
+$typography-x-large-desktop-font-family: "Gza";
+$typography-x-large-desktop-font-weight: 700;
+$typography-x-large-desktop-font-size: 66px;
+$typography-x-large-desktop-line-height: 114%;
+$typography-x-large-desktop-letter-spacing: 0px;
 ```
 
 ### Shorthand Typography CSS Transform
@@ -263,7 +293,10 @@ yarn build
 
 ### Transforms
 
-- [all transforms](https://github.com/tokens-bruecke/sd-utils/tree/main/examples/transformers) - all transforms in one example. Just uncomment the transform you want to test.
+For transforms there are separate folders for each platform/language. Some examples in `build.js` are commented out.
+
+- [CSS transforms](https://github.com/tokens-bruecke/sd-utils/tree/main/examples/css-transformers)
+- [SCSS transforms](https://github.com/tokens-bruecke/sd-utils/tree/main/examples/scss-transformers)
 
 ---
 

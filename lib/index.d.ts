@@ -15,6 +15,7 @@ declare const config: {
     transforms: {
         typographyCSS: string;
         typographyCSSShorthand: string;
+        typographySCSS: string;
         shadowCSS: string;
         blurCSS: string;
     };
@@ -41,6 +42,7 @@ declare const DTCGParser: () => ParserResult;
 declare const transformNames: {
     typographyCSS: string;
     typographyCSSShorthand: string;
+    typographySCSSTransform: string;
     shadowCSS: string;
     blurCSS: string;
 };

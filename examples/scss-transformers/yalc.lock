@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "@tokens-bruecke/sd-utils": {
+      "signature": "a507d527843250c31f90cf58bf17d63f",
+      "file": true
+    }
+  }
+}
