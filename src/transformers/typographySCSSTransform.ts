@@ -2,7 +2,7 @@ import { config } from "../helpers";
 
 export const typographySCSSTransform = () => {
   return {
-    name: `${config.dictionaryName}/${config.transforms.typographyCSS}`,
+    name: `${config.dictionaryName}/${config.transforms.typographySCSS}`,
     type: "value",
     transitive: true,
     matcher: ({ type }) => {
