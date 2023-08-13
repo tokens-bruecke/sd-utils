@@ -9,7 +9,7 @@ import { typographySCSSTransform } from "./typographySCSSTransform";
 const transformNames = {
   typographyCSS: `${config.dictionaryName}/${config.transforms.typographyCSS}`,
   typographyCSSShorthand: `${config.dictionaryName}/${config.transforms.typographyCSSShorthand}`,
-  typographySCSSTransform: `${config.dictionaryName}/${config.transforms.typographySCSS}`,
+  typographySCSS: `${config.dictionaryName}/${config.transforms.typographySCSS}`,
   shadowCSS: `${config.dictionaryName}/${config.transforms.shadowCSS}`,
   blurCSS: `${config.dictionaryName}/${config.transforms.blurCSS}`
 };
@@ -27,7 +27,7 @@ export const registerTransform = (
     const transformMap = {
       [transformNames.typographyCSS]: typographyCSSTransform,
       [transformNames.typographyCSSShorthand]: typographyCSSShorthandTransform,
-      [transformNames.typographySCSSTransform]: typographySCSSTransform,
+      [transformNames.typographySCSS]: typographySCSSTransform,
       [transformNames.shadowCSS]: shadowCSSTransform,
       [transformNames.blurCSS]: blurCSSTransform
     };
@@ -41,10 +41,31 @@ export const registerTransform = (
     StyleDictionary.registerTransform(transform());
   });
 
-  console.log("transformTypes", transformTypes);
+  const selectedCSSTransforms = transformTypes.filter((transformType) =>
+    transformType.includes("-css")
+  );
+  const selectedSCSSTransforms = transformTypes.filter(
+    (transformType) =>
+      transformType.includes("-scss") ||
+      transformType.includes(config.transforms.typographyCSSShorthand) ||
+      transformType.includes(config.transforms.blurCSS) ||
+      transformType.includes(config.transforms.shadowCSS)
+  );
 
-  StyleDictionary.registerTransformGroup({
-    name: `${config.dictionaryName}/custom`,
-    transforms: ["name/cti/kebab", ...transformTypes]
-  });
+  console.log("CSS transforms", selectedCSSTransforms);
+  console.log("SCSS transforms", selectedSCSSTransforms);
+
+  if (selectedCSSTransforms.length > 0) {
+    StyleDictionary.registerTransformGroup({
+      name: `${config.dictionaryName}/css`,
+      transforms: ["name/cti/kebab", ...selectedCSSTransforms]
+    });
+  }
+
+  if (selectedSCSSTransforms.length > 0) {
+    StyleDictionary.registerTransformGroup({
+      name: `${config.dictionaryName}/scss`,
+      transforms: ["name/cti/kebab", ...selectedSCSSTransforms]
+    });
+  }
 };

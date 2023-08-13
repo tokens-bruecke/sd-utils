@@ -14,6 +14,7 @@ This is the repo/package with utils for [Style Dictionary](https://amzn.github.i
     - [compositeParser](#compositeparser)
   - [Transforms](#transforms)
     - [Available transforms](#available-transforms)
+    - [How to use the transforms](#how-to-use-the-transforms)
     - [Shadow CSS Transform](#shadow-css-transform)
     - [Blur CSS Transform](#blur-css-transform)
     - [Typography CSS Transform](#typography-css-transform)
@@ -127,23 +128,25 @@ The parser accepts an array of token types `typography`, `grid`, `shadow` and `b
 
 ## Transforms
 
-You need first to register the parser and then register the transform group. Then you can use the transform group in the Style Dictionary config.
-Find out more examples in the `examples` folder.
+### Available transforms
 
-In order to use the transforms, you need to register them first with the `registerTransform` function.
-The `registerTransform` function could accept a string or an array of strings. The string is the name of the transform:
+| Transform                                                                      | Description                                            | Transform Group                             | Language compatibility |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------- | ---------------------- |
+| [tokens-bruecke/shadow-css](#shadow-css-transform)                             | Generates CSS `box-shadow` property                    | `tokens-bruecke/css`, `tokens-bruecke/scss` | All CSS Languages ✅   |
+| [tokens-bruecke/blur-css](#blur-css-transform)                                 | Generates CSS `filter` property                        | `tokens-bruecke/css`, `tokens-bruecke/scss` | All CSS Languages ✅   |
+| [tokens-bruecke/typography-css](#typography-css-transform)                     | Generates multiple CSS properties                      | `tokens-bruecke/css`                        | Only CSS variables ⚠️  |
+| [tokens-bruecke/typography-scss](#typography-scss-transform)                   | Generates multiple SCSS properties                     | `tokens-bruecke/scss`                       | Only SCSS variables ⚠️ |
+| [tokens-bruecke/typography-css-shorthand](#shorthand-typography-css-transform) | Generates CSS `font` property without other properties | `tokens-bruecke/css`, `tokens-bruecke/scss` | All CSS Languages ✅   |
 
 ---
 
-### Available transforms
+### How to use the transforms
 
-| Transform                                                                      | Description                                            | Language compatibility |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------ | ---------------------- |
-| [tokens-bruecke/shadow-css](#shadow-css-transform)                             | Generates CSS `box-shadow` property                    | All CSS Languages ✅   |
-| [tokens-bruecke/blur-css](#blur-css-transform)                                 | Generates CSS `filter` property                        | All CSS Languages ✅   |
-| [tokens-bruecke/typography-css](#typography-css-transform)                     | Generates multiple CSS properties                      | Only CSS variables ⚠️  |
-| [tokens-bruecke/typography-scss](#typography-scss-transform)                   | Generates multiple SCSS properties                     | Only SCSS variables ⚠️ |
-| [tokens-bruecke/typography-css-shorthand](#shorthand-typography-css-transform) | Generates CSS `font` property without other properties | All CSS Languages ✅   |
+You need first to register the parser and then register the transform group. Then you can use the transform group in the Style Dictionary config.
+Find out more examples in the `examples` folder.
+
+In order to use the transforms, you need to register them first with the `registerTransform()` function.
+The `registerTransform()` function could accept a string or an array of strings. The string is the name of the transform:
 
 ---
 
@@ -157,6 +160,14 @@ tokensbrueckeSDUtils.registerTransform([
   "tokens-bruecke/shadow-css"
 ]);
 ```
+
+Do not forget to specify the transform group in the Style Dictionary config.
+Currently `sd-utils` supports only `css` and `scss` transform groups. Some `CSS` transforms also works for `SCSS` transform group. See example [CSS + SCSS transforms](https://github.com/tokens-bruecke/sd-utils/tree/main/examples/css+scss-transformers).
+
+**Transform groups:**
+
+- `tokens-bruecke/css`
+- `tokens-bruecke/scss`
 
 ```js
 // IMPORT
@@ -174,7 +185,7 @@ const StyleDictionaryExtended = StyleDictionary.extend({
   source: ["tokens/**/*.json"],
   platforms: {
     css: {
-      transformGroup: "tokens-bruecke/custom", // <-- TRANSFORM GROUP NAME
+      transformGroup: "tokens-bruecke/css", // <-- TRANSFORM GROUP NAME
       buildPath: "build/",
       files: [
         {
@@ -296,7 +307,7 @@ yarn build
 For transforms there are separate folders for each platform/language. Some examples in `build.js` are commented out.
 
 - [CSS transforms](https://github.com/tokens-bruecke/sd-utils/tree/main/examples/css-transformers)
-- [SCSS transforms](https://github.com/tokens-bruecke/sd-utils/tree/main/examples/scss-transformers)
+- [CSS + SCSS transforms](https://github.com/tokens-bruecke/sd-utils/tree/main/examples/css+scss-transformers)
 
 ---
 

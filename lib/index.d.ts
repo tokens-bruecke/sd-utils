@@ -42,7 +42,7 @@ declare const DTCGParser: () => ParserResult;
 declare const transformNames: {
     typographyCSS: string;
     typographyCSSShorthand: string;
-    typographySCSSTransform: string;
+    typographySCSS: string;
     shadowCSS: string;
     blurCSS: string;
 };

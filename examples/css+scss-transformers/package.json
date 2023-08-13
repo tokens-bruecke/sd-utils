@@ -15,7 +15,7 @@
   "author": "Pavel Laptev",
   "license": "MIT",
   "dependencies": {
-    "@tokens-bruecke/sd-utils": "git+https://github.com/tokens-bruecke/sd-utils.git#8982541286fe82646bc283a012900ba6dc9f34c7",
+    "@tokens-bruecke/sd-utils": "git+https://github.com/tokens-bruecke/sd-utils.git#b8b96df7484e108f1a6755ecbf5bffa2116e3a36",
     "style-dictionary": "3.8.0"
   }
 }
