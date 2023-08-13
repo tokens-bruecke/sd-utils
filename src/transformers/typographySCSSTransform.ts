@@ -26,7 +26,7 @@ export const typographySCSSTransform = () => {
         .map(([key, value]) => {
           return `${key}: ${value};`;
         })
-        .join("\n  ");
+        .join("\n");
 
       return `${shorthandFontProperty};\n  ${cssString}`;
     }
