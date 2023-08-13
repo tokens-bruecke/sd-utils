@@ -28,7 +28,7 @@ export const typographySCSSTransform = () => {
         })
         .join("\n");
 
-      return `${shorthandFontProperty};\n  ${cssString}`;
+      return `${shorthandFontProperty};\n${cssString}`;
     }
   } as any;
 };
